@@ -39,4 +39,60 @@ element.style.backgroundColor = "#ffffff"; // Adiciona a propriedade CSS
 element.classList.add('active'); // Adiciona a class active ao body
 element.classList.remove('active'); // Remove a class active do body
 element.classList.toggle('active'); // Se a class existir ele remove, se não existir, ele adiciona
- 
+
+// Pegar o pai dos elementos
+const element = document.querySelector('body');
+body.parentNode;
+body.parentElement;
+
+// Pegando elementos filhos
+const element = document.querySelector('body');
+element.childNodes;
+element.children;
+element.firstChild; // Leva em consideração espaços vazios no HTML
+element.firstElementChild; // Não leva em consideração espaços vazios no HTML
+element.lastChild;
+element.lastElementChild;
+
+// Navegar por elementos irmãos
+const element = document.querySelector('header');
+element.nextSibling; // Leva em consideração espaços vazios no HTML
+element.nextElementSibling; // Não leva em consideração espaços vazios no HTML
+element.previousSibling; // Leva em consideração espaços vazios no HTML
+element.previousElementSibling; // Não leva em consideração espaços vazios no HTML
+
+// Criando e adicionando elementos no HTML
+const div = element.createElement('div'); // Cria o elemento div
+div.innerText = "Olá Devs!"; // Adiciona um texto ao elemento criado
+
+const body = element.querySelector('body');
+body.append(div); // Adiciona depois de todo HTML (ultimo filho)
+body.prepend(div); // Adiciona antes de todo HTML (primeiro filho)
+
+const script = body.querySelector('script');
+body.insertBefore(div, script); // Adiciona o elemento div antes do elemento script
+
+
+// Eventos
+// onclick = "print()"
+function print() {
+  console.log('print');
+}
+
+const input = document.querySelector('input');
+input.onkeydown = function () {
+  console.log('rodei');
+}
+
+const h1 = document.querySelector('h1');
+h1.addEventListener('click', print); // Adiciona o evento e a função
+function print() {
+  console.log('print');
+}
+
+// argument event
+const input = element.querySelector('input');
+input.onkeydown = function(event) {
+  console.log(event.currentTarget.value); // Pega o valor digitado no input usando event
+}
+
