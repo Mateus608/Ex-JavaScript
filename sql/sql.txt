@@ -1,0 +1,73 @@
+select * from aluno where matricula = 1;
+
+select * from aluno where nome like 'j%';
+
+select matricula, cpf from aluno where nome like '%g%';
+
+/* O operador = só funciona no campo number */
+select * from aluno where cpf = 45678945645;
+
+select * from aluno where matricula = 3;
+
+/* Para utilizar em campos de texto utilizamos o like no lugar do = */ 
+select * from aluno where nome like 'joão castro';
+
+/* Operador > maior que */
+select * from aluno where matricula > 2;
+
+/* Operador < menor que */
+select * from aluno where matricula < 2;
+
+/* Operador <> não igual a */
+select * from aluno where matricula <> 2;
+
+/* Operador != diferente de */
+select * from aluno where matricula != 3;
+
+/* Operador matematico + adição */
+select * from aluno where matricula = 1 + 1;
+
+/* Operador matematico - subtração */
+select * from aluno where matricula = 2 - 1; 
+
+/* Operador matematico * multiplicação */
+select * from aluno where matricula = 2 * 1;
+
+/* Operador matematico / divisão */
+select * from aluno where matricula = 4 / 2; 
+
+/* Operador matematico % resto divisão */
+select * from aluno where matricula = 8 % 5; 
+
+/* Operador lógico AND */
+select * from aluno where nome like 'j%' and matricula < 2; 
+
+/* Operador lógico OR */
+select * from aluno where matricula > 1 or nome like 'j%';
+
+/* Operador lógico BETWEEN */
+select * from funcionarios
+where id_funcionario between 4 and 7;
+
+select * from funcionarios
+where id_funcionario not between 4 and 7;
+
+/* Operador lógico IN e NOT IN*/
+select * from funcionarios
+where id_departamento in (1, 2, 5);
+
+select * from funcionarios
+where id_departamento not in (1, 2, 5);
+
+/* Operador lógico IS NULL e IS NOT NULL*/
+select * from funcionarios
+where id_departamento is null;
+
+select * from funcionarios
+where id_departamento is not null;
+
+insert into aluno values (null, 'Maria Luiza', 48452016987, 'Marcos Soares');
+
+update aluno set nome = 'Maria Joana', responsavel = 'Marcio Soares' where matricula = 4;
+
+delete from aluno where matricula = 4; 
