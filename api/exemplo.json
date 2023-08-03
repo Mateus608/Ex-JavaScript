@@ -1,0 +1,22 @@
+{
+  "nome" : "Mateus",
+  "cidade" : "São Paulo",
+  "telefone" : 9665635854,
+  "livros_favoritos" : [
+    "neuromancer",
+    "codigo limpo",
+    "essencialismo"
+  ],
+  "hobbies" : {
+    "semana" : "patinação",
+    "fim_de_semana" : {
+      "sabado" : "cinema",
+      "domingo" : "parque",
+      "outros" : [
+        "caminhada",
+        "volei",
+        "netflix"
+      ]
+    }
+  }
+}
